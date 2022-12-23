@@ -1,0 +1,6 @@
+[02-Dec-2022 14:43:35 UTC] PHP Notice:  Undefined index: ideditar in /home/tecprado/public_html/app-mtto/tecprado/Basicas/General/Queries/infogrupo.php on line 5
+[02-Dec-2022 14:43:37 UTC] PHP Notice:  Undefined index: ideditar in /home/tecprado/public_html/app-mtto/tecprado/Basicas/General/Queries/infogrupo.php on line 5
+[03-Dec-2022 00:03:21 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Basicas/General/Queries/filtroambiente.php on line 6
+[03-Dec-2022 00:03:29 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Basicas/General/Queries/filtroambiente.php on line 6
+[03-Dec-2022 00:03:30 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Basicas/General/Queries/filtroambiente.php on line 6
+[05-Dec-2022 14:51:10 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Basicas/General/Queries/filtroambiente.php on line 6

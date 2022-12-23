@@ -1,0 +1,12 @@
+[01-Dec-2022 20:24:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '24-' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Modelo/linea.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Modelo/linea.php(17): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Controlador/add.php(11): linea->add('24', 'PRUEBA3')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Modelo/linea.php on line 17
+[02-Dec-2022 14:36:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '01-' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Modelo/linea.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Modelo/linea.php(17): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Controlador/add.php(11): linea->add('01', 'LAKSLAKSA')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Linea/Modelo/linea.php on line 17

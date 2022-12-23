@@ -1,0 +1,12 @@
+[22-Nov-2022 20:30:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '007' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Modelo/complejo.php:18
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Modelo/complejo.php(18): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Controlador/add.php(11): complejo->add('007', 'PR')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Modelo/complejo.php on line 18
+[01-Dec-2022 20:09:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '005' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Modelo/complejo.php:18
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Modelo/complejo.php(18): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Controlador/add.php(11): complejo->add('005', 'PRUEBA')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Complejo/Modelo/complejo.php on line 18

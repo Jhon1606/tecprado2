@@ -1,0 +1,24 @@
+[01-Dec-2022 20:09:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '99' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php(17): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Controlador/add.php(11): unidades->add('99', 'PRUEBA')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php on line 17
+[01-Dec-2022 20:09:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bt' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php(17): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Controlador/add.php(11): unidades->add('bt', 'PRUEBA')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php on line 17
+[01-Dec-2022 20:24:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '23' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php(17): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Controlador/add.php(11): unidades->add('23', 'PRUEBA4')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php on line 17
+[02-Dec-2022 14:41:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '23' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php(17): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Controlador/add.php(11): unidades->add('23', 'DSDSDS')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Unidades/Modelo/unidades.php on line 17

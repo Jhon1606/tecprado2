@@ -1,0 +1,52 @@
+[01-Dec-2022 20:10:14 UTC] PHP Notice:  Undefined index: codigo_gru in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php on line 7
+[01-Dec-2022 20:10:14 UTC] PHP Notice:  Undefined variable: codigo in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php on line 12
+[01-Dec-2022 20:10:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:18
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php(18): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(14): grupo->add(NULL, 'PRUEBA', '1', 'f', '1')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 18
+[01-Dec-2022 20:10:35 UTC] PHP Notice:  Undefined index: codigo_gru in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php on line 7
+[01-Dec-2022 20:10:35 UTC] PHP Notice:  Undefined variable: codigo in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php on line 12
+[01-Dec-2022 20:10:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:18
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php(18): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(14): grupo->add(NULL, 'PRUEBA', '1', 'f', '1')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 18
+[01-Dec-2022 22:44:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_flash_message() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(12): grupo->add('23', 'PRUEBA2', '1')
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 17
+[02-Dec-2022 14:43:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_flash_message() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(12): grupo->add('', '', '')
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 17
+[02-Dec-2022 14:43:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_flash_message() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:80
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/delete.php(10): grupo->delete('')
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 80
+[02-Dec-2022 14:44:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_flash_message() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:80
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/delete.php(10): grupo->delete('')
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 80
+[02-Dec-2022 14:45:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_flash_message() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(12): grupo->add('24', 'PRUEBA4', '1')
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 17
+[02-Dec-2022 14:45:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_flash_message() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:17
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(12): grupo->add('25', 'PRUEBA5', '1')
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 17
+[02-Dec-2022 15:06:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '23' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php:18
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php(18): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Controlador/add.php(12): grupo->add('23', 'PRUEBA4', '1')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Grupo/Modelo/grupo.php on line 18
