@@ -56,7 +56,7 @@
     </div>
 </li> -->
 
-<!-- Nav Item - Pages Collapse Menu
+ <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes"
         aria-expanded="true" aria-controls="collapseReportes">
@@ -65,17 +65,10 @@
     </a>
     <div id="collapseReportes" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="../../../Reportes/ReporteEquipo/Vista/index.php">Reportes de equipos</a>
         </div>
     </div>
-</li> -->
+</li>
 
 <!-- <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEstadisticas"

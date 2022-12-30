@@ -1,23 +1,23 @@
-<?php
-    session_start();
-    error_reporting(0);
-    require_once('../../../Helpers/alert.php');
-    require_once('../Modelo/equipos.php');
+<?php 
+session_start();
+error_reporting(0);
+require_once('../../../Helpers/alert.php');
+require_once('../Modelo/reportes.php');
 
-    $modeloEquipo= new equipo();
+$modeloReporte= new reporte();
 
-    if(isset($_POST['verTodos'])){
-        $equipos = $modeloEquipo->get();
-    }
+if($_POST){
+    $codigo = $_POST['codigo'];
+    $complejo = $_POST['complejo'];
+    $ambiente = $_POST['ambiente'];
+    $habitacion = $_POST['habitacion'];
+    $grupo = $_POST['grupo'];
+    $linea = $_POST['linea'];
 
-    if($_POST['consulta'] != ""){
-        $consulta = $_POST['consulta'];
-        $equipos = $modeloEquipo->buscar($consulta);
-    } else{
-    $equipos = $modeloEquipo->get();
-    }
+    $reportes = $modeloReporte->getReporteEquipo($codigo,$complejo,$ambiente,$habitacion,$grupo,$linea);
+}
 
-    if (isset($_SESSION['Nombre'])){
+if (isset($_SESSION['Nombre'])){
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inventario de equipos</title>
+    <title>Reportes de equipos</title>
     <link href="../../../Bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
@@ -79,46 +79,8 @@
                 <?php require_once('../../../Nav/topbar.php'); ?>
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h2>Inventario de equipos</h2>
-                    <div class="row">
-                        <div class="col p-2">
-                            <a href="javascript:void(0);" onclick="modalAgregar('Equipo')"><button type="button" class="btn btn-info" title="Añadir"><i class="bi bi-plus-lg"></i> Agregar Equipo </button></a> 
-                        </div>
-
-                        <div class="col-3 p-2" style="text-align:left;">
-                            <div class="row">
-                                <div class="col-2 p-1"> <label class="form-label">Filtrar</label></div>
-                                <div class="col-10">
-                                    <select class="form-select" onchange="">
-                                        <option value="">Seleccione</option>
-                                        <option value="codigo">Codigo</option>
-                                        <option value="complejo">Complejo</option>
-                                        <option value="ambiente">Ambiente</option>
-                                        <option value="habitacion">Habitación</option>
-                                        <option value="grupo">Grupo</option>
-                                        <option value="descripcion">Descripción</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-5 p-2">
-                        <form action="" method="POST">
-                            <div class="row">
-                                <div class="col-8"> <input class="form-control" type="search" placeholder="Buscar..." name="consulta"></div>
-                                <div class="col-4"> <button type="submit" class="btn btn-primary">Buscar</button></div>
-                            </div>
-                        </form>
-                        </div>
-                       
-                        
-                        <div class="col p-2">
-                            <form action="" method="POST">
-                                <button type="submit" class="btn btn-primary" name="verTodos">Ver todos</button>
-                            </form>
-                        </div>
-                    </div>
+                <div class="container">
+                    <h2>Reporte</h2>
 
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
@@ -135,32 +97,26 @@
                                     <th scope="col">Modelo</th> 
                                     <th scope="col">Marca</th> 
                                     <th scope="col">Ultimo mtto</th> 
-                                    <th scope="col"></th> 
                                 </tr>
                             </thead>
 
                             <tbody>
                             <?php         
-                                if($equipos != null){ 
-                                    foreach($equipos as $equipo){
+                                if($reportes != null){ 
+                                    foreach($reportes as $reporte){
                             ?>
                                 <tr>
-                                    <th><?php echo $equipo['codigo_eqp']; ?></th>
-                                    <td><?php echo $equipo['centro_costo']; ?></td>
-                                    <td><?php echo $equipo['ambiente']; ?></td>
-                                    <td><?php echo $equipo['habitacion']; ?></td>
-                                    <td><?php echo $equipo['descripcion']; ?></td>
-                                    <td><?php echo $equipo['codigo_grupo']; ?></td>
-                                    <td><?php echo $equipo['codigo_linea']; ?></td>
-                                    <td><?php echo $equipo['serie']; ?></td>
-                                    <td><?php echo $equipo['modelo']; ?></td>
-                                    <td><?php echo $equipo['marca']; ?></td>
-                                    <td><?php echo $equipo['fecha_ultimo_mtto']; ?></td>
-                                    <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalEditarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-success my-1" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
-                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-danger" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
-                                        <a href="javascript:void(0)" onclick="modalSubirArchivo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-light my-1" title="Subir Archivo"><i class="bi bi-capslock-fill"></i> </button></a>
-                                    </td>
+                                    <th><?php echo $reporte['codigo_eqp']; ?></th>
+                                    <td><?php echo $reporte['centro_costo']; ?></td>
+                                    <td><?php echo $reporte['ambiente']; ?></td>
+                                    <td><?php echo $reporte['habitacion']; ?></td>
+                                    <td><?php echo $reporte['descripcion']; ?></td>
+                                    <td><?php echo $reporte['codigo_grupo']; ?></td>
+                                    <td><?php echo $reporte['codigo_linea']; ?></td>
+                                    <td><?php echo $reporte['serie']; ?></td>
+                                    <td><?php echo $reporte['modelo']; ?></td>
+                                    <td><?php echo $reporte['marca']; ?></td>
+                                    <td><?php echo $reporte['fecha_ultimo_mtto']; ?></td>
                                 </tr>
                             <?php
                                     }
@@ -212,27 +168,11 @@
                 <div class="modal-body">Estás seguro de cerrar sesión?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../../../Usuarios/Controlador/salir.php">Salir</a>
+                    <a class="btn btn-primary" href="../../Usuarios/Controlador/salir.php">Salir</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <?php
-        require_once('add.php');
-    ?>
-
-    <?php
-        require_once('edit.php');
-    ?>
-
-    <?php
-        require_once('delete.php');
-    ?>
-
-    <?php
-        require_once('file.php');
-    ?>
 
     <?php show_flash_messages() ?> 
 
@@ -240,5 +180,5 @@
 
 </html>
 <?php } else{
-    header('Location: ../../../index.php');
+    header('Location: ../../index.php');
 } ?>
