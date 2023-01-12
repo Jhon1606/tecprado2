@@ -115,6 +115,18 @@ function cargarAmbiente(complejo){
     });
 }
 
+function cargarLinea(grupo){
+    $.ajax({
+        url: "../../General/Queries/filtrolinea.php",
+        type: "POST",
+        dataType: "HTML",
+        data: {grupo: grupo},
+        success: function(selectLinea){
+            $('#crearLinea').html(selectLinea);
+        }
+    });
+}
+
 function cargarAmbienteEditar(complejo,ambiente){
     $.ajax({
         url: "../../General/Queries/filtroeditarambiente.php",
