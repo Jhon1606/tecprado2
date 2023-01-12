@@ -196,7 +196,17 @@ class equipo extends conexion{
         return $rows;
     }
 
+    public function verLineaPorGrupo($codigo){
 
+        $rows=null;
+        $statement=$this->conexion->prepare("SELECT * FROM linea_equipos WHERE grupo=:codigo");
+        $statement->bindParam(":codigo",$codigo);
+        $statement->execute();
+        while($result=$statement->fetch()){
+            $rows[]=$result;
+        }
+        return $rows;
+    }
 
     public function getById($codigo){
 
