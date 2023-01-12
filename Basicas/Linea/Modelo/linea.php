@@ -9,11 +9,12 @@ class linea extends conexion{
         $this->conexion=parent::__construct();
     }   
 
-    public function add($codigo_linea,$descripcion){
-    $statement=$this->conexion->prepare("INSERT INTO linea_equipos (codigo_linea,descripcion)
-                                        VALUES(:codigo_linea,:descripcion)");
+    public function add($codigo_linea,$descripcion,$grupo){
+    $statement=$this->conexion->prepare("INSERT INTO linea_equipos (codigo_linea,descripcion,grupo)
+                                        VALUES(:codigo_linea,:descripcion,:grupo)");
     $statement->bindParam(':codigo_linea',$codigo_linea);
     $statement->bindParam(':descripcion',$descripcion);
+    $statement->bindParam(':grupo',$grupo);
     if($statement->execute()){
         create_flash_message("Exitoso", "Registro exitoso","success");
         header('Location: ../Vista/index.php');
@@ -27,6 +28,17 @@ class linea extends conexion{
     public function get(){
         $rows=null;
         $statement=$this->conexion->prepare("SELECT * FROM linea_equipos");
+        $statement->execute();
+        while($result=$statement->fetch()){
+            $rows[]=$result;
+        }
+        return $rows;
+    }
+
+    public function getGrupo(){
+
+        $rows=null;
+        $statement=$this->conexion->prepare("SELECT * FROM grupo_equipo");
         $statement->execute();
         while($result=$statement->fetch()){
             $rows[]=$result;
@@ -57,11 +69,12 @@ class linea extends conexion{
         return $rows;
     }
 
-    public function update($codigo_linea,$descripcion){
-        $statement=$this->conexion->prepare("UPDATE linea_equipos SET descripcion=:descripcion WHERE codigo_linea = :codigo_linea");
+    public function update($codigo_linea,$descripcion,$grupo){
+        $statement=$this->conexion->prepare("UPDATE linea_equipos SET descripcion=:descripcion, grupo=:grupo WHERE codigo_linea = :codigo_linea");
 
          $statement->bindParam(':codigo_linea',$codigo_linea);
          $statement->bindParam(':descripcion',$descripcion);
+         $statement->bindParam(':grupo',$grupo);
          
          if($statement->execute()){
             create_flash_message("Exitoso", "Registro exitoso","success");

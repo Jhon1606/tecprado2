@@ -192,9 +192,11 @@ function modalEditarLinea(ideditar){
     .done(function(info){
         var codigo_linea = info[0].codigo_linea;
         var descripcion = info[0].descripcion;
+        var grupo = info[0].grupo;
 
         $("#ideditar").val(codigo_linea);
         $("#descripcion").val(descripcion);
+        $("#grupo").val(grupo);
         $('#modalEditarLinea').modal('show');
     });
 }

@@ -37,25 +37,27 @@ class reporte extends conexion{
 
     public function getReporteEquipo($codigo,$complejo,$ambiente,$habitacion,$grupo,$linea){
         $rows=null;
-        $query="";
+        $query=" codigo_eqp <> '' ";
         if($codigo!=""){
-            $query .= "a.codigo_eqp = :codigo";
+            $query .= " AND a.codigo_eqp like '%$codigo%'";
         }
         if($complejo!=""){
-            $query .= " AND b.descripcion = :complejo";
+            $query .= " AND b.descripcion = '$complejo' ";
         }
         if($ambiente!=""){
-            $query .= " AND c.descripcion = :ambiente";
+            $query .= " AND c.descripcion = '$ambiente'";
         }
         if($habitacion!=""){
-            $query .= " AND a.habitacion = :habitacion";
+            $query .= " AND a.habitacion = $habitacion";
         }
         if($grupo!=""){
-            $query .= " AND d.descripcion = :grupo";
+            $query .= " AND d.descripcion = '$grupo'";
         }
         if($linea!=""){
-            $query .= " AND e.descripcion = :linea";
+            $query .= " AND e.descripcion = '$linea'";
         }
+
+       
         $statement=$this->conexion->prepare("SELECT a.codigo_eqp, b.descripcion AS centro_costo, c.descripcion AS ambiente, a.habitacion, a.descripcion, 
                                             d.descripcion AS codigo_grupo, e.descripcion AS codigo_linea, a.serie, a.modelo, a.marca, a.observaciones,
                                             a.fecha_ultimo_mtto, f.descripcion AS codigo_und, a.estandar_combustible
@@ -67,12 +69,7 @@ class reporte extends conexion{
                                             INNER JOIN unidades AS f ON a.codigo_und= f.codigo_und 
                                             WHERE $query");  
       
-        $statement->bindParam(':codigo',$codigo);
-        $statement->bindParam(':complejo',$complejo);
-        $statement->bindParam(':ambiente',$ambiente);
-        $statement->bindParam(':habitacion',$habitacion);
-        $statement->bindParam(':grupo',$grupo);
-        $statement->bindParam(':linea',$linea);              
+             
         $statement->execute();
         while($result=$statement->fetch()){
             $rows[]=$result;

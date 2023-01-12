@@ -6,9 +6,10 @@ if ($_POST) {
 
     $codigo_linea = $_POST['codigo_linea'];
     $descripcion = strtoupper($_POST['descripcion']); 
+    $grupo = $_POST['grupo'];
     $modeloLinea->existe($codigo_linea);
     
-    $modeloLinea->add($codigo_linea,$descripcion);
+    $modeloLinea->add($codigo_linea,$descripcion,$grupo);
    
     }else{
         header('Location: ../../index.php');

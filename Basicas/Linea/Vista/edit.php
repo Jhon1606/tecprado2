@@ -15,6 +15,23 @@
                     <div class="mb-3">
                         <input class="form-control" type="text" placeholder="Descripción..." name="descripcion" id="descripcion" aria-label="Descripcion">
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label">Grupo: </label>
+                        <select name="grupo" id="grupo" class="form-select">
+                            <option value="">Seleccione</option>
+                            <?php 
+                            $grupos = $modeloLinea->getGrupo(); 
+                                
+                            if($grupos != null){
+                                foreach($grupos as $grupo){
+                                ?>
+                                <option value="<?php echo $grupo['codigo_gru']; ?>"><?php echo $grupo['descripcion']; ?></option>
+                                <?php
+                                    }
+                                }
+                            ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <a href="index.php"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar</button></a> 

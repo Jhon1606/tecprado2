@@ -82,6 +82,7 @@
                                 <tr>
                                     <th scope="col">Codigo</th>
                                     <th scope="col">Descripción</th> 
+                                    <th scope="col">Grupo</th> 
                                     <th scope="col"></th> 
                                 </tr>
                             </thead>
@@ -94,6 +95,7 @@
                                 <tr>
                                     <th><?php echo $linea['codigo_linea']; ?></th>
                                     <td><?php echo $linea['descripcion']; ?></td>
+                                    <td><?php echo $linea['grupo']; ?></td>
                                     <td style="text-align:right;">
                                         <a href="javascript:void(0);" onclick="modalEditarLinea('<?php echo $linea['codigo_linea']; ?>')"><button type="button" class="btn btn-success my-1" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
                                         <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $linea['codigo_linea']; ?>')"><button type="button" class="btn btn-danger" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>

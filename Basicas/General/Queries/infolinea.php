@@ -15,6 +15,7 @@ if ($informacionLinea != null){
         $arreglo[] = array(
                             "codigo_linea"=>$infoLinea["codigo_linea"],
                             "descripcion"=>$infoLinea["descripcion"],    
+                            "grupo"=>$infoLinea["grupo"],    
                         );
     }
 }

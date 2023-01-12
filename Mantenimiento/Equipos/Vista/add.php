@@ -9,8 +9,7 @@
             <!-- Formulario -->
             <form action="../Controlador/add.php" method="POST">
                 <div class="modal-body">
-                    <div class="mb-3">
-                        
+                    <div class="mb-3"> 
                         <input class="form-control" type="text" placeholder="Codigo..." name="codigo_eqp" required="" aria-label="Codigo">
                     </div>
                     <div class="mb-3">
@@ -82,6 +81,7 @@
                                         <option value="<?php echo $linea['codigo_linea']; ?>"><?php echo $linea['descripcion']; ?></option>
                                         <?php
                                         }
+                                        
                                     }
                                     ?>  
                                 </select>
