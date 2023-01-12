@@ -54,7 +54,7 @@
                         <div class="row">
                             <div class="col">
                                 <label class="form-label">Grupo</label>
-                                <select class="form-select" name="codigo_grupo" id="codigo_grupo">
+                                <select class="form-select" name="codigo_grupo" id="codigo_grupo" onchange="cargarLineaEditar(this.value,'')">
                                     <option value="">Seleccione</option>
                                     <?php
                                     $grupos= $modeloEquipo->getGrupo();
@@ -70,21 +70,9 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <label class="form-label">Linea de equipos</label>
-                                <select class="form-select" name="codigo_linea" id="codigo_linea">
-                                    <option value="">Seleccione</option>
-                                    <?php
-                                    $lineas= $modeloEquipo->getLinea();
+                                <div id="editarLinea">
 
-                                    if($lineas != null){
-                                        foreach($lineas as $linea){
-                                        ?>
-                                        <option value="<?php echo $linea['codigo_linea']; ?>"><?php echo $linea['descripcion']; ?></option>
-                                        <?php
-                                        }
-                                    }
-                                    ?>  
-                                </select>
+                                </div>
                             </div>
                         </div>
                     </div>

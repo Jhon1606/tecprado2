@@ -3,6 +3,7 @@
 require_once "../../Equipos/Modelo/equipos.php";
 
 $grupo = $_POST['grupo'];
+$linea = $_POST['linea'];
 
 $ModeloLinea = new equipo();
 $InformacionLineas = $ModeloLinea->verLineaPorGrupo($grupo);
@@ -16,20 +17,20 @@ if($InformacionLineas != null){
 
         foreach ($InformacionLineas as $InfoLinea) {
 
-            if($InfoLinea["grupo"] == $linea){
+            if($InfoLinea["grupo"] == $grupo){
 
                 $selectLinea .= "<option value='" . $InfoLinea["codigo_linea"] . "'>" . $InfoLinea["descripcion"] . "</option>";
 
             }    
         }
-    } 
-    
-    $selectLinea .= "<option value=''>Seleccione una opción</option>";
+    } else {
+        $selectLinea .= "<option value=''>Seleccione una opción</option>";
 
-    foreach ($InformacionLineas as $InfoLinea) {
+        foreach ($InformacionLineas as $InfoLinea) {
 
-        $selectLinea .= "<option value='" . $InfoLinea["codigo_linea"] . "'>" . $InfoLinea["descripcion"] . "</option>";
+            $selectLinea .= "<option value='" . $InfoLinea["codigo_linea"] . "'>" . $InfoLinea["descripcion"] . "</option>";
 
+        }
     }
 }
 

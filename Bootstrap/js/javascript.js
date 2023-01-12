@@ -91,7 +91,7 @@ function modalEditarEquipo(ideditar){
         cargarHabitacionEditar(ambiente,habitacion);
         $("#descripcion").val(descripcion);
         $("#codigo_grupo").val(codigo_grupo);
-        $("#codigo_linea").val(codigo_linea);
+        cargarLineaEditar(codigo_grupo,codigo_linea);
         $("#serie").val(serie);
         $("#modelo").val(modelo);
         $("#marca").val(marca);
@@ -123,6 +123,18 @@ function cargarLinea(grupo){
         data: {grupo: grupo},
         success: function(selectLinea){
             $('#crearLinea').html(selectLinea);
+        }
+    });
+}
+
+function cargarLineaEditar(grupo,linea){
+    $.ajax({
+        url: "../../General/Queries/filtrolinea.php",
+        type: "POST",
+        dataType: "HTML",
+        data: {grupo: grupo, linea: linea},
+        success: function(selectLinea){
+            $('#editarLinea').html(selectLinea);
         }
     });
 }
