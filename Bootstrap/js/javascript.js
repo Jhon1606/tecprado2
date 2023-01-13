@@ -92,6 +92,7 @@ function modalEditarEquipo(ideditar){
         $("#descripcion").val(descripcion);
         $("#codigo_grupo").val(codigo_grupo);
         cargarLineaEditar(codigo_grupo,codigo_linea);
+        $("#codigo_linea").val(codigo_linea);
         $("#serie").val(serie);
         $("#modelo").val(modelo);
         $("#marca").val(marca);
@@ -115,12 +116,24 @@ function cargarAmbiente(complejo){
     });
 }
 
-function cargarLinea(grupo){
+function cargarAmbienteEditar(complejo,ambiente){
+    $.ajax({
+        url: "../../General/Queries/filtroeditarambiente.php",
+        type: "POST",
+        dataType: "HTML",
+        data: {complejo: complejo, ambiente: ambiente},
+        success: function(selectAmbiente){
+            $('#editarAmbiente').html(selectAmbiente);
+        }
+    });
+}
+
+function cargarLinea(grupo,linea){
     $.ajax({
         url: "../../General/Queries/filtrolinea.php",
         type: "POST",
         dataType: "HTML",
-        data: {grupo: grupo},
+        data: {grupo: grupo, linea: linea},
         success: function(selectLinea){
             $('#crearLinea').html(selectLinea);
         }
@@ -135,18 +148,6 @@ function cargarLineaEditar(grupo,linea){
         data: {grupo: grupo, linea: linea},
         success: function(selectLinea){
             $('#editarLinea').html(selectLinea);
-        }
-    });
-}
-
-function cargarAmbienteEditar(complejo,ambiente){
-    $.ajax({
-        url: "../../General/Queries/filtroeditarambiente.php",
-        type: "POST",
-        dataType: "HTML",
-        data: {complejo: complejo, ambiente: ambiente},
-        success: function(selectAmbiente){
-            $('#editarAmbiente').html(selectAmbiente);
         }
     });
 }

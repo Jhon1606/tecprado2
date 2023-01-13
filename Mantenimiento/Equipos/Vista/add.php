@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="form-label">Grupo</label>
-                                <select class="form-select" name="codigo_grupo" onchange="cargarLinea(this.value)">
+                                <select class="form-select" name="codigo_grupo" onchange="cargarLinea(this.value,'')">
                                     <option value="">Seleccione</option>
                                     <?php
                                     $grupos= $modeloEquipo->getGrupo();
