@@ -27,7 +27,10 @@ class linea extends conexion{
   
     public function get(){
         $rows=null;
-        $statement=$this->conexion->prepare("SELECT * FROM linea_equipos");
+        $statement=$this->conexion->prepare("SELECT a.codigo_linea, a.descripcion, b.descripcion AS grupo
+                                            FROM linea_equipos AS a
+                                            INNER JOIN grupo_equipo AS b
+                                            WHERE grupo = b.codigo_gru");
         $statement->execute();
         while($result=$statement->fetch()){
             $rows[]=$result;

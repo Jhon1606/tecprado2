@@ -17,7 +17,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Grupo: </label>
-                        <select name="grupo" class="form-select">
+                        <select name="grupo" class="form-select" required="">
                             <option value="">Seleccione</option>
                             <?php 
                             $grupos = $modeloLinea->getGrupo(); 
