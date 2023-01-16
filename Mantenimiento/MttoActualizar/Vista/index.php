@@ -121,10 +121,10 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Codigo</th>
+                                    <th scope="col">Descripción</th> 
                                     <th scope="col">Complejo</th> 
                                     <th scope="col">Ambiente</th> 
                                     <th scope="col">Hab</th> 
-                                    <th scope="col">Descripción</th> 
                                     <th scope="col">Grupo</th> 
                                     <th scope="col">Linea</th> 
                                     <th scope="col">Ultimo mtto</th> 
@@ -139,15 +139,16 @@
                             ?>
                                 <tr>
                                     <th><?php echo $equipo['codigo_eqp']; ?></th>
+                                    <td><?php echo $equipo['descripcion']; ?></td>
                                     <td><?php echo $equipo['centro_costo']; ?></td>
                                     <td><?php echo $equipo['ambiente']; ?></td>
                                     <td><?php echo $equipo['habitacion']; ?></td>
-                                    <td><?php echo $equipo['descripcion']; ?></td>
                                     <td><?php echo $equipo['codigo_grupo']; ?></td>
                                     <td><?php echo $equipo['codigo_linea']; ?></td>
                                     <td><?php echo $equipo['fecha_ultimo_mtto']; ?></td>
                                     <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalActualizarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-success my-1" title="Actualizar">Actualizar</button></a>
+                                        <a href="javascript:void(0);" onclick="modalActualizarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-xs btn-success my-1" title="Actualizar">Actualizar</button></a>
+                                        <a href="javascript:void(0);" onclick="modalHistorialMtto('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-xs btn-success my-1" title="Historial">Historial</button></a>
                                     </td>
                                 </tr>
                             <?php
@@ -166,13 +167,9 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
+            <?php 
+                require_once("../../../Nav/footer.php");
+            ?>
             <!-- End of Footer -->
 
         </div>

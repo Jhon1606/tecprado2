@@ -21,12 +21,12 @@
                     
                     <div class="mb-3">
                         <label for="form-label">Fecha mantenimiento</label>
-                        <input class="form-control" type="date" name="fecha_ultimo_mtto" id="fecha_ultimo_mtto" max="<?php echo date('Y-m-d')?>">
+                        <input class="form-control" type="date" name="fecha_ultimo_mtto" id="fecha_ultimo_mtto" max="<?php echo date('Y-m-d')?>" required="">
                     </div>
 
                     <div class="mb-3">
                         <label for="form-label">Descripción Mtto:</label>
-                        <textarea class="form-control" name="descripcion_mtto" id="descripcion_mtto"></textarea>
+                        <textarea class="form-control" name="descripcion_mtto" id="descripcion_mtto" required=""></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
