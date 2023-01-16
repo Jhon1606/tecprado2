@@ -7,16 +7,16 @@
                 <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
             </div>
             <!-- Formulario -->
-            <form action="../Controlador/add.php" method="POST">
+            <form action="../Controlador/actualizar.php" method="POST">
                 <div class="modal-body">
                     <div class="mb-3"> 
                         <label class="form-label">Código</label>
-                        <input class="form-control" type="text" placeholder="Codigo..." name="codigo_eqp" id="codigo_eqp" required="">
+                        <input class="form-control" type="text" placeholder="Codigo..." name="codigo_eqp" id="codigo_eqp" readonly>
                     </div>
 
                     <div class="mb-3"> 
                         <label class="form-label">Descripción: </label>
-                        <input class="form-control" type="text" placeholder="Descripción..." name="descripcion" id="descripcion" required="">
+                        <input class="form-control" type="text" placeholder="Descripción..." name="descripcion" id="descripcion" readonly>
                     </div>
                     
                     <div class="mb-3">
@@ -26,7 +26,7 @@
 
                     <div class="mb-3">
                         <label for="form-label">Descripción Mtto:</label>
-                        <textarea class="form-control" name="descripcion_mtto"></textarea>
+                        <textarea class="form-control" name="descripcion_mtto" id="descripcion_mtto"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

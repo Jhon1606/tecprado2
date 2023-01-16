@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Codigo</label>
-                        <input class="form-control" type="text" placeholder="Codigo..." name="codigo_eqp" id="ideditar" required="" aria-label="Codigo">
+                        <input class="form-control" type="text" placeholder="Codigo..." name="codigo_eqp" id="ideditar" readonly>
                     </div>
                     <div class="mb-3">
                         <div class="row">

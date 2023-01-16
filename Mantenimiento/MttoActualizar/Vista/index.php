@@ -2,19 +2,19 @@
     session_start();
     error_reporting(0);
     require_once('../../../Helpers/alert.php');
-    require_once('../Modelo/equipos.php');
+    require_once('../Modelo/actualizar.php');
 
-    $modeloEquipo= new equipo();
+    $modeloActualizar= new actualizar();
 
     if(isset($_POST['verTodos'])){
-        $equipos = $modeloEquipo->get();
+        $equipos = $modeloActualizar->get();
     }
 
     if($_POST['consulta'] != ""){
         $consulta = $_POST['consulta'];
-        $equipos = $modeloEquipo->buscar($consulta);
+        $equipos = $modeloActualizar->buscar($consulta);
     } else{
-    $equipos = $modeloEquipo->get();
+    $equipos = $modeloActualizar->get();
     }
 
     if (isset($_SESSION['Nombre'])){
