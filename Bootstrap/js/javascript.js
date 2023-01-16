@@ -260,6 +260,27 @@ function modalEditarTipo(ideditar){
     });
 }
 
+function modalActualizarEquipo(ideditar){ 
+    $.ajax({
+        url: "../../General/Queries/infoactualizarequipo.php",
+        type: "POST",
+        dataType: "JSON",
+        data: {ideditar: ideditar}
+    })
+    .done(function(info){
+        var codigo_eqp = info[0].codigo_eqp;
+        var descripcion = info[0].descripcion;
+        var fecha_ultimo_mtto = info[0].fecha_ultimo_mtto;
+        var descripcion_mtto = info[0].descripcion_mtto;
+
+        $("#codigo_eqp").val(codigo_eqp);
+        $("#descripcion").val(descripcion);
+        $("#fecha_ultimo_mtto").val(fecha_ultimo_mtto);
+        $("#descripcion_mtto").val(descripcion_mtto);
+        $('#modalActualizarEquipo').modal('show');
+    });
+}
+
 function modalEliminar(codigo){
     alert(codigo);
     $("#codigo").val(codigo);
