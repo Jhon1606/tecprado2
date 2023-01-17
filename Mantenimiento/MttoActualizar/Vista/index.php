@@ -208,15 +208,11 @@
     ?>
 
     <?php
-        require_once('edit.php');
+        require_once('historial.php');
     ?>
 
     <?php
         require_once('delete.php');
-    ?>
-
-    <?php
-        require_once('file.php');
     ?>
 
     <?php show_flash_messages() ?> 

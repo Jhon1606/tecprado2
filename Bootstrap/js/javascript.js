@@ -279,6 +279,32 @@ function modalActualizarEquipo(ideditar){
     });
 }
 
+function modalHistorialMtto(codigo){
+    $.ajax({
+        url: "../../General/Queries/infohistorial.php",
+        type: "POST",
+        dataType: "JSON",
+        data: {codigo: codigo}
+    })
+    .done(function(info){
+        var valores = info;
+        $('#tablaHistorial').empty();
+             
+        for(var i=0; i<valores.length; i++){
+
+            if(valores[i].codigo_eqp = codigo){   
+                var td = `<tr><td>` + valores[i].codigo_eqp +
+                `</td>
+                <td>` + valores[i].descripcion +`</td>
+                <td>` + valores[i].fecha_mtto +`</td></tr>`;
+
+                $("#tablaHistorial").append(td);  
+            }              
+        }
+    });
+    $('#modalHistorialMtto').modal('show'); 
+}
+
 function modalEliminar(codigo){
     alert(codigo);
     $("#codigo").val(codigo);

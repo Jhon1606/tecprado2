@@ -42,6 +42,17 @@ class actualizar extends conexion{
         return $rows;
     }
 
+    public function getMtto($codigo){
+        $rows=null;
+        $statement=$this->conexion->prepare("SELECT * FROM historial_mtto WHERE codigo_eqp = :codigo");
+        $statement->bindParam(':codigo',$codigo);                 
+        $statement->execute();
+        while($result=$statement->fetch()){
+            $rows[]=$result;
+        }
+        return $rows;
+    }
+
     public function buscar($consulta){
         $rows=null;
         $statement=$this->conexion->prepare("SELECT a.codigo_eqp, b.descripcion AS centro_costo, c.descripcion AS ambiente, a.habitacion, a.descripcion, 
