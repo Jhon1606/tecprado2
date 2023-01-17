@@ -147,8 +147,8 @@
                                     <td><?php echo $equipo['codigo_linea']; ?></td>
                                     <td><?php echo $equipo['fecha_ultimo_mtto']; ?></td>
                                     <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalActualizarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-xs btn-success my-1" title="Actualizar">Actualizar</button></a>
-                                        <a href="javascript:void(0);" onclick="modalHistorialMtto('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-xs btn-success my-1" title="Historial">Historial</button></a>
+                                        <a href="javascript:void(0);" onclick="modalActualizarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-sm btn-success my-1" title="Actualizar">Actualizar</button></a>
+                                        <a href="javascript:void(0);" onclick="modalHistorialMtto('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-sm btn-success my-1" title="Historial">Historial</button></a>
                                     </td>
                                 </tr>
                             <?php
