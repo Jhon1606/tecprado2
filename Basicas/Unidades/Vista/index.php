@@ -73,7 +73,7 @@
                 <div class="container-fluid">
                     <h2>Unidades</h2>
                     <div class="col p-2">
-                        <a href="javascript:void(0);" onclick="modalAgregar('Unidades')" ><button type="button" class="btn btn-info" title="Añadir"><i class="bi bi-plus-lg"></i> Agregar Unidades</button></a> 
+                        <a href="javascript:void(0);" onclick="modalAgregar('Unidades')" ><button type="button" class="btn btn-info" title="Añadir"><i class="fa fa-plus-circle"></i> Agregar Unidades</button></a> 
                     </div>
 
                     <div class="table-responsive">
@@ -95,8 +95,8 @@
                                     <th><?php echo $unidad['codigo_und']; ?></th>
                                     <td><?php echo $unidad['descripcion']; ?></td>
                                     <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalEditarUnidad('<?php echo $unidad['codigo_und']; ?>')"><button type="button" class="btn btn-success my-1" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
-                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $unidad['codigo_und']; ?>')"><button type="button" class="btn btn-danger" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
+                                        <a href="javascript:void(0);" onclick="modalEditarUnidad('<?php echo $unidad['codigo_und']; ?>')"><button type="button" class="btn btn-success my-1 btn-sm" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
+                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $unidad['codigo_und']; ?>')"><button type="button" class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
                                     </td>
                                 </tr>
                             <?php
@@ -115,13 +115,9 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
+            <?php 
+                require_once("../../../Nav/footer.php");
+            ?>
             <!-- End of Footer -->
 
         </div>
@@ -148,8 +144,8 @@
                 </div>
                 <div class="modal-body">Estás seguro de cerrar sesión?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../../../Usuarios/Controlador/salir.php">Salir</a>
+                    <button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary btn-sm" href="../../../Usuarios/Controlador/salir.php">Salir</a>
                 </div>
             </div>
         </div>

@@ -33,6 +33,7 @@
             <!-- <a class="collapse-item" href="buttons.html">Buttons</a>
             <a class="collapse-item" href="cards.html">Cards</a> -->
             <a class="collapse-item" href="../../../Mantenimiento/Equipos/Vista/index.php">Inventario de equipos</a>
+            <a class="collapse-item" href="../../../Mantenimiento/MttoActualizar/Vista/index.php">Actualización</a>
         </div>
     </div>
 </li>

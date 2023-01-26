@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="../../../Bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../../../Bootstrap/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -74,7 +75,7 @@
                 <div class="container-fluid">
                     <h2>Ambientes</h2>
                     <div class="col p-2">
-                        <a href="javascript:void(0);" onclick="modalAgregar('Ambiente')" ><button type="button" class="btn btn-info" title="Añadir"><i class="bi bi-plus-lg"></i> Agregar Ambiente </button></a> 
+                        <a href="javascript:void(0);" onclick="modalAgregar('Ambiente')" ><button type="button" class="btn btn-info btn-sm" title="Añadir"><i class="fa fa-plus-circle"></i> Agregar Ambiente </button></a> 
                     </div>
 
                     <div class="table-responsive">
@@ -100,8 +101,8 @@
                                     <td><?php echo $ambiente['centro_costo']; ?></td>
                                     <td><?php echo $ambiente['tipo_ubicacion']; ?></td>
                                     <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalEditarAmbiente('<?php echo $ambiente['codigo']; ?>')"><button type="button" class="btn btn-success my-1" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
-                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $ambiente['codigo']; ?>')"><button type="button" class="btn btn-danger" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
+                                        <a href="javascript:void(0);" onclick="modalEditarAmbiente('<?php echo $ambiente['codigo']; ?>')"><button type="button" class="btn btn-success my-1 btn-sm btn-sm" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
+                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $ambiente['codigo']; ?>')"><button type="button" class="btn btn-danger btn-sm btn-sm" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
                                     </td>
                                 </tr>
                             <?php
@@ -120,13 +121,9 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
+            <<?php 
+                require_once("../../../Nav/footer.php");
+            ?>
             <!-- End of Footer -->
 
         </div>
@@ -153,8 +150,8 @@
                 </div>
                 <div class="modal-body">Estás seguro de cerrar sesión?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../../../Usuarios/Controlador/salir.php">Salir</a>
+                    <button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary btn-sm" href="../../../Usuarios/Controlador/salir.php">Salir</a>
                 </div>
             </div>
         </div>

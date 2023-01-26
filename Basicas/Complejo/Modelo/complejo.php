@@ -24,10 +24,37 @@ class complejo extends conexion{
         }
 
     }
+
+    public function addHabitacion($piso,$centro_costo){
+     
+        $statement=$this->conexion->prepare("INSERT INTO habitaciones(id,piso,centro_costo)
+                                            VALUES(:piso,:piso,:centro_csoto)");
+        $statement->bindParam(':piso',$piso);
+        $statement->bindParam(':centro_costo',$centro_costo);
+        if($statement->execute()){
+            create_flash_message("Exitoso", "Registro exitoso","success");
+            header('Location: ../Vista/index.php');
+        }else{
+            create_flash_message("Error", "Error al registrar","error");
+            header('Location: ../Vista/index.php');
+        }
+
+    }
   
     public function get(){
         $rows=null;
         $statement=$this->conexion->prepare("SELECT * FROM centros_costos");
+        $statement->execute();
+        while($result=$statement->fetch()){
+            $rows[]=$result;
+        }
+        return $rows;
+    }
+
+    public function getHabitacion($complejo){
+        $rows=null;
+        $statement=$this->conexion->prepare("SELECT * FROM habitaciones WHERE centro_costo =:complejo");
+        $statement->bindParam(':complejo',$complejo);
         $statement->execute();
         while($result=$statement->fetch()){
             $rows[]=$result;
@@ -52,8 +79,7 @@ class complejo extends conexion{
         $statement->bindParam(":codigo",$codigo);
         $statement->execute();
         if($statement->fetchColumn()>0){
-            create_flash_message("Error", "El código existe","error");
-            header('Location: ../Vista/index.php');
+            return true;
         }
         return false;
     }

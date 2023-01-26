@@ -20,8 +20,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="index.php"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar</button></a> 
-                    <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    <a href="index.php"><button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal"> Cerrar</button></a> 
+                    <button type="submit" id="btnGuardar" class="btn btn-primary btn-sm">Guardar</button>
                 </div>
             </form>
         </div>

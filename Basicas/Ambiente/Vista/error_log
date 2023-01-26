@@ -1,0 +1,10 @@
+[01-Nov-2022 17:07:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ambiente::getComplejo() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Ambiente/Vista/add.php:23
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Ambiente/Vista/index.php(536): require_once()
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Ambiente/Vista/add.php on line 23
+[04-Nov-2022 15:25:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ambiente::getComplejo() in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Ambiente/Vista/add.php:23
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Ambiente/Vista/index.php(536): require_once()
+#1 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Ambiente/Vista/add.php on line 23

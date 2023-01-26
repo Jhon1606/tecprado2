@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="myModalEquipo" tabindex="-1" aria-hidden="true">
+<div class="modal  fade" id="myModalEquipo" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -46,14 +46,14 @@
                     
                     <div class="mb-3">
                         <label for="form-label">Descripcion</label>
-                        <textarea class="form-control" name="descripcion" rows="3"></textarea>
+                        <textarea class="form-control" name="descripcion" rows="2"></textarea>
                     </div>
 
                     <div class="mb-3">
                         <div class="row">
                             <div class="col">
                                 <label for="form-label">Grupo</label>
-                                <select class="form-select" name="codigo_grupo" onchange="cargarLinea(this.value)">
+                                <select class="form-select" name="codigo_grupo" onchange="cargarLinea(this.value,'')">
                                     <option value="">Seleccione</option>
                                     <?php
                                     $grupos= $modeloEquipo->getGrupo();
@@ -92,7 +92,7 @@
                     
                     <div class="mb-3">
                         <label for="form-label">Observaciones</label>
-                        <textarea class="form-control" name="observaciones" rows="3"></textarea>
+                        <textarea class="form-control" name="observaciones" rows="2"></textarea>
                     </div>
 
                     <div class="mb-3">

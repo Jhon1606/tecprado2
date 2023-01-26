@@ -20,6 +20,34 @@ function modalEditarComplejo(codigo){
     });
 }
 
+function modalHabitacion(complejo){
+    $('#centro_costo').val(complejo);
+    $.ajax({
+        url: "../../General/Queries/lsthabitacion.php",
+        type: "POST",
+        dataType: "JSON",
+        data: {complejo: complejo}
+    })
+    .done(function(info){
+        
+        var valores = info;
+        $('#tablaHabitaciones').empty();
+             
+        for(var i=0; i<valores.length; i++){
+                
+            var td = `<tr>
+                <td>` + valores[i].id + `</td>
+                <td>` + valores[i].piso  + `</td>
+                <td>` + valores[i].complejo + `</td>
+            </tr>`;
+
+            $("#tablaHabitaciones").append(td);                
+        }
+    });
+
+    $('#modalHabitacion').modal('show');
+}
+
 function modalEditarAmbiente(ideditar){
 
     $.ajax({
@@ -92,6 +120,7 @@ function modalEditarEquipo(ideditar){
         $("#descripcion").val(descripcion);
         $("#codigo_grupo").val(codigo_grupo);
         cargarLineaEditar(codigo_grupo,codigo_linea);
+        $("#codigo_linea").val(codigo_linea);
         $("#serie").val(serie);
         $("#modelo").val(modelo);
         $("#marca").val(marca);
@@ -115,12 +144,24 @@ function cargarAmbiente(complejo){
     });
 }
 
-function cargarLinea(grupo){
+function cargarAmbienteEditar(complejo,ambiente){
+    $.ajax({
+        url: "../../General/Queries/filtroeditarambiente.php",
+        type: "POST",
+        dataType: "HTML",
+        data: {complejo: complejo, ambiente: ambiente},
+        success: function(selectAmbiente){
+            $('#editarAmbiente').html(selectAmbiente);
+        }
+    });
+}
+
+function cargarLinea(grupo,linea){
     $.ajax({
         url: "../../General/Queries/filtrolinea.php",
         type: "POST",
         dataType: "HTML",
-        data: {grupo: grupo},
+        data: {grupo: grupo, linea: linea},
         success: function(selectLinea){
             $('#crearLinea').html(selectLinea);
         }
@@ -135,18 +176,6 @@ function cargarLineaEditar(grupo,linea){
         data: {grupo: grupo, linea: linea},
         success: function(selectLinea){
             $('#editarLinea').html(selectLinea);
-        }
-    });
-}
-
-function cargarAmbienteEditar(complejo,ambiente){
-    $.ajax({
-        url: "../../General/Queries/filtroeditarambiente.php",
-        type: "POST",
-        dataType: "HTML",
-        data: {complejo: complejo, ambiente: ambiente},
-        success: function(selectAmbiente){
-            $('#editarAmbiente').html(selectAmbiente);
         }
     });
 }
@@ -259,8 +288,52 @@ function modalEditarTipo(ideditar){
     });
 }
 
+function modalActualizarEquipo(ideditar){ 
+    $.ajax({
+        url: "../../General/Queries/infoactualizarequipo.php",
+        type: "POST",
+        dataType: "JSON",
+        data: {ideditar: ideditar}
+    })
+    .done(function(info){
+        var codigo_eqp = info[0].codigo_eqp;
+        var descripcion = info[0].descripcion;
+        var fecha_ultimo_mtto = info[0].fecha_ultimo_mtto;
+
+        $("#codigo_eqp").val(codigo_eqp);
+        $("#descripcion").val(descripcion);
+        $("#fecha_ultimo_mtto").val(fecha_ultimo_mtto);
+        $('#modalActualizarEquipo').modal('show');
+    });
+}
+
+function modalHistorialMtto(codigo){
+    $.ajax({
+        url: "../../General/Queries/infohistorial.php",
+        type: "POST",
+        dataType: "JSON",
+        data: {codigo: codigo}
+    })
+    .done(function(info){
+        var valores = info;
+        $('#tablaHistorial').empty();
+             
+        for(var i=0; i<valores.length; i++){
+
+            if(valores[i].codigo_eqp = codigo){   
+                var td = `<tr><td>` + valores[i].codigo_eqp +
+                `</td>
+                <td>` + valores[i].descripcion +`</td>
+                <td>` + valores[i].fecha_mtto +`</td></tr>`;
+
+                $("#tablaHistorial").append(td);  
+            }              
+        }
+    });
+    $('#modalHistorialMtto').modal('show'); 
+}
+
 function modalEliminar(codigo){
-    alert(codigo);
     $("#codigo").val(codigo);
     $('#myModalEliminar').modal('show');
 }

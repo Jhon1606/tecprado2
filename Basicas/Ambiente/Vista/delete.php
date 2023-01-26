@@ -13,8 +13,8 @@
                     ¿Está seguro que desea eliminar el Ambiente?
                 </div>
                 <div class="modal-footer">
-                    <a href="index.php"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cancelar</button></a> 
-                    <button type="submit" class="btn btn-primary">Eliminar</button>
+                    <a href="index.php"><button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal"> Cancelar</button></a> 
+                    <button type="submit" class="btn btn-primary btn-sm">Eliminar</button>
                 </div>
             </form>
         </div>

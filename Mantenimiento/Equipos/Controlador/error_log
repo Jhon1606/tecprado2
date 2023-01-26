@@ -1,0 +1,9 @@
+[13-Jan-2023 21:41:48 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Controlador/edit.php on line 11
+[19-Jan-2023 14:34:08 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Controlador/add.php on line 10
+[19-Jan-2023 14:35:36 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Controlador/add.php on line 10
+[19-Jan-2023 14:35:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PC001' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php:29
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php(29): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Controlador/add.php(23): equipo->add('PC001', '005', '10', NULL, 'SERVER ZEUS', '24', '01', '222', '222', '222', '', '', '', '2023-01-19')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php on line 29

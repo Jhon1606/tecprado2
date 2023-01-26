@@ -1,0 +1,6 @@
+[01-Dec-2022 15:40:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0001' for key 'PRIMARY' in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Equipos/Modelo/equipos.php:27
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Equipos/Modelo/equipos.php(27): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Basicas/Equipos/Controlador/add.php(21): equipo->add('0001', '005', '005', 'DDS', 'SEL', '20', '1', '1', '1', 'dsdsd', 'RP', '1')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Basicas/Equipos/Modelo/equipos.php on line 27

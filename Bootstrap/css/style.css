@@ -1,0 +1,27 @@
+.wnav{
+    width: 15rem;
+}
+
+.wflex{
+    width:75%;
+    margin: 1rem;
+}
+
+@media (max-width: 767px){
+    .wflex{
+       width:90%;
+    }
+}
+
+@media (max-width: 767px){
+    .wnav{
+       width:8rem;
+    }
+}
+
+.table {
+    font-size:12px;
+}
+.mb-3 {
+    margin-bottom: 0.2rem!important;
+}
