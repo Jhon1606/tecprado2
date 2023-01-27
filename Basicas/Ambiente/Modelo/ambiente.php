@@ -43,11 +43,9 @@ class ambiente extends conexion{
     public function existe($codigo){
         $statement = $this->conexion->prepare("SELECT COUNT(*) FROM ubicacion WHERE codigo = :codigo");
         $statement->bindParam(":codigo",$codigo);
-        $statement->execute();
-        
+        $statement->execute();  
         if($statement->fetchColumn()>0){
-            create_flash_message("Error", "El código existe","error");
-            header('Location: ../Vista/index.php');
+           return true;
         }
         return false;
     }

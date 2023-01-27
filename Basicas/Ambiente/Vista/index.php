@@ -96,7 +96,7 @@
                                     foreach($ambientes as $ambiente){
                             ?>
                                 <tr>
-                                    <th><?php echo $ambiente['codigo']; ?></th>
+                                    <td><?php echo $ambiente['codigo']; ?></td>
                                     <td><?php echo $ambiente['descripcion']; ?></td>
                                     <td><?php echo $ambiente['centro_costo']; ?></td>
                                     <td><?php echo $ambiente['tipo_ubicacion']; ?></td>

@@ -92,7 +92,7 @@
                                     foreach($unidades as $unidad){
                             ?>
                                 <tr>
-                                    <th><?php echo $unidad['codigo_und']; ?></th>
+                                    <td><?php echo $unidad['codigo_und']; ?></td>
                                     <td><?php echo $unidad['descripcion']; ?></td>
                                     <td style="text-align:right;">
                                         <a href="javascript:void(0);" onclick="modalEditarUnidad('<?php echo $unidad['codigo_und']; ?>')"><button type="button" class="btn btn-success my-1 btn-sm" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>

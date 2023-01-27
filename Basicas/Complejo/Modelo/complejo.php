@@ -28,7 +28,7 @@ class complejo extends conexion{
     public function addHabitacion($piso,$centro_costo){
      
         $statement=$this->conexion->prepare("INSERT INTO habitaciones(id,piso,centro_costo)
-                                            VALUES(:piso,:piso,:centro_csoto)");
+                                            VALUES(:piso,:piso,:centro_costo)");
         $statement->bindParam(':piso',$piso);
         $statement->bindParam(':centro_costo',$centro_costo);
         if($statement->execute()){
@@ -53,7 +53,9 @@ class complejo extends conexion{
 
     public function getHabitacion($complejo){
         $rows=null;
-        $statement=$this->conexion->prepare("SELECT * FROM habitaciones WHERE centro_costo =:complejo");
+        $statement=$this->conexion->prepare("SELECT a.piso, b.descripcion FROM habitaciones AS a 
+                                            INNER JOIN centros_costos AS b ON a.centro_costo = b.codigo
+                                            WHERE centro_costo =:complejo");
         $statement->bindParam(':complejo',$complejo);
         $statement->execute();
         while($result=$statement->fetch()){
@@ -84,6 +86,16 @@ class complejo extends conexion{
         return false;
     }
 
+    public function existeHabitacion($piso){
+        $statement = $this->conexion->prepare("SELECT COUNT(*) FROM habitaciones WHERE piso = :piso");
+        $statement->bindParam(":piso",$piso);
+        $statement->execute();
+        if($statement->fetchColumn()>0){
+            return true;
+        }
+        return false;
+    }
+
     public function update($codigo,$descripcion){
         $statement=$this->conexion->prepare("UPDATE centros_costos SET descripcion = :descripcion WHERE codigo = :codigo");
 
@@ -102,6 +114,18 @@ class complejo extends conexion{
     public function delete($codigo){
         $statement=$this->conexion->prepare("DELETE FROM centros_costos WHERE codigo = :codigo");
         $statement->bindParam(":codigo",$codigo);
+        if($statement->execute()){
+            create_flash_message("Exitoso", "Eliminado con exito","success");
+            header('Location: ../Vista/index.php');
+        }else{
+            create_flash_message("Error", "Error al Eliminar","error");
+            header('Location: ../Vista/index.php');
+        }
+    }
+
+    public function deleteHabitacion($id_piso){
+        $statement=$this->conexion->prepare("DELETE FROM habitaciones WHERE piso = :id_piso");
+        $statement->bindParam(":id_piso",$id_piso);
         if($statement->execute()){
             create_flash_message("Exitoso", "Eliminado con exito","success");
             header('Location: ../Vista/index.php');

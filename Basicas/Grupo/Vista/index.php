@@ -92,7 +92,7 @@
                                     foreach($grupos as $grupo){
                             ?>
                                 <tr>
-                                    <th><?php echo $grupo['codigo_gru']; ?></th>
+                                    <td><?php echo $grupo['codigo_gru']; ?></td>
                                     <td><?php echo $grupo['descripcion']; ?></td>
                                     <td><?php echo $grupo['consecutivo']; ?></td>
                                     <td style="text-align:right;">

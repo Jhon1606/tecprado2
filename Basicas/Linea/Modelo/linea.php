@@ -54,8 +54,7 @@ class linea extends conexion{
         $statement->bindParam(":codigo",$codigo);
         $statement->execute();
         if($statement->fetchColumn()>0){
-            create_flash_message("Error", "El código existe","error");
-            header('Location: ../Vista/index.php');
+            return true;
         }
         return false;
     }

@@ -72,7 +72,7 @@
                                     foreach($complejos as $complejo){
                             ?>
                                 <tr>
-                                    <th><?php echo $complejo['codigo']; ?></th>
+                                    <td><?php echo $complejo['codigo']; ?></td>
                                     <td><?php echo $complejo['descripcion']; ?></td>
                                     <td style="text-align:right;">
                                         <a href="javascript:void(0);" onclick="modalEditarComplejo('<?php echo $complejo['codigo']; ?>')"><button type="button" class="btn btn-success my-1 btn-sm" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
@@ -96,7 +96,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <<?php 
+            <?php 
                 require_once("../../../Nav/footer.php");
             ?>
             <!-- End of Footer -->
@@ -144,8 +144,12 @@
         require_once('delete.php');
     ?>
 
-<?php
+    <?php
         require_once('habitacion.php');
+    ?>
+
+    <?php
+        require_once('habitaciondelete.php');
     ?>
 
     <!-- Bootstrap core JavaScript-->
@@ -167,6 +171,7 @@
 
     <script src="../../../Bootstrap/js/javascript.js"></script>
     <?php show_flash_messages() ?> 
+
 </body>
 
 </html>

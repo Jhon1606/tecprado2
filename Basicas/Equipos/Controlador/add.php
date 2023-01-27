@@ -16,12 +16,15 @@ if ($_POST) {
     $observaciones = $_POST['observaciones']; 
     $codigo_und = $_POST['codigo_und']; 
     $estandar_combustible = $_POST['estandar_combustible']; 
-    $modeloEquipo->existe($codigo_eqp);
-    
-    $modeloEquipo->add($codigo_eqp,$centro_costo,$ambiente,$descripcion,$codigo_grupo,$codigo_linea,$serie,$modelo,$marca,$observaciones,$codigo_und,$estandar_combustible);
-   
+    if($modeloEquipo->existe($codigo_eqp)){
+        create_flash_message("Error", "El código existe","error");
+        header('Location: ../Vista/index.php');
     }else{
-        header('Location: ../../index.php');
-    }
+        $modeloEquipo->add($codigo_eqp,$centro_costo,$ambiente,$descripcion,$codigo_grupo,$codigo_linea,$serie,$modelo,$marca,$observaciones,$codigo_und,$estandar_combustible);
+    }  
+
+}else{
+    header('Location: ../../index.php');
+}
 
 ?>

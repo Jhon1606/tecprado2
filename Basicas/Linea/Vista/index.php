@@ -94,7 +94,7 @@
                                     foreach($lineas as $linea){
                             ?>
                                 <tr>
-                                    <th><?php echo $linea['codigo_linea']; ?></th>
+                                    <td><?php echo $linea['codigo_linea']; ?></td>
                                     <td><?php echo $linea['descripcion']; ?></td>
                                     <td><?php echo $linea['grupo']; ?></td>
                                     <td style="text-align:right;">

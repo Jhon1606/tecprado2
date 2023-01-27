@@ -1,21 +1,21 @@
 <!-- Modal -->
-<div class="modal fade" id="modalHabitacion" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade" id="myModalHabitacion" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Añadir Habitación</h5>
-                <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+                <button type="button" onclick="cerrarModals('Habitacion')" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- Formulario -->
             <form action="../Controlador/habitacionadd.php" method="POST">
                 <div class="modal-body">
-                    <div class="mb-3">
+                    <div class="mb-3 col-6">
                         <input class="form-control" type="number" placeholder="Número de habitación" name="piso" required="">
                         <input type="hidden" id="centro_costo" name="centro_costo">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="index.php"><button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal"> Cerrar</button></a> 
+                    <button type="button" onclick="cerrarModals('Habitacion')" class="btn btn-secondary btn-sm" data-bs-dismiss="modal"> Cerrar</button>
                     <button type="submit" id="btnGuardar" class="btn btn-primary btn-sm">Guardar</button>
                 </div>
             </form>
@@ -24,9 +24,9 @@
                 <table class="table table-striped table-hover" >
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
                             <th scope="col">Habitación</th> 
                             <th scope="col">Complejo</th> 
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     

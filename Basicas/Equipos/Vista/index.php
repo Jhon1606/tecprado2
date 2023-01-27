@@ -101,7 +101,7 @@
                                     foreach($equipos as $equipo){
                             ?>
                                 <tr>
-                                    <th><?php echo $equipo['codigo_eqp']; ?></th>
+                                    <td><?php echo $equipo['codigo_eqp']; ?></td>
                                     <td><?php echo $equipo['centro_costo']; ?></td>
                                     <td><?php echo $equipo['ambiente']; ?></td>
                                     <td><?php echo $equipo['descripcion']; ?></td>

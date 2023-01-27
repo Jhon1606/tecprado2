@@ -139,8 +139,7 @@ class equipo extends conexion{
         $statement->bindParam(":codigo_eqp",$codigo_eqp);
         $statement->execute();
         if($statement->fetchColumn()>0){
-            create_flash_message("Error", "El código existe","error");
-            header('Location: ../Vista/index.php');
+            return true;
         }
         return false;
     }

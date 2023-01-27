@@ -12,9 +12,8 @@ if($habitaciones != null){
     foreach($habitaciones as $habitacion){
        
         $arreglo[] = array(
-            "id"=>$habitacion["id"],
             "piso"=>$habitacion["piso"],
-            "complejo"=>$habitacion["complejo"]
+            "complejo"=>$habitacion["descripcion"]
         );
    
 

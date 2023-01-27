@@ -16,7 +16,7 @@ function modalEditarComplejo(codigo){
 
         $("#ideditar").val(codigo);
         $("#descripcion").val(descripcion);
-        $('#modalEditarComplejo').modal('show');
+        $('#myModalEditarComplejo').modal('show');
     });
 }
 
@@ -36,16 +36,16 @@ function modalHabitacion(complejo){
         for(var i=0; i<valores.length; i++){
                 
             var td = `<tr>
-                <td>` + valores[i].id + `</td>
                 <td>` + valores[i].piso  + `</td>
                 <td>` + valores[i].complejo + `</td>
+                <td>    <a href="javascript:void(0);" onclick="modalEliminarHabitacion('`+ valores[i].piso +`')"><button type="button" class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash3"></i> </button></a></td>
             </tr>`;
 
             $("#tablaHabitaciones").append(td);                
         }
     });
 
-    $('#modalHabitacion').modal('show');
+    $('#myModalHabitacion').modal('show');
 }
 
 function modalEditarAmbiente(ideditar){
@@ -66,7 +66,7 @@ function modalEditarAmbiente(ideditar){
         $("#descripcion").val(descripcion);
         $("#tipo_ubicacion").val(tipo_ubicacion);
         $("#centro_costo").val(centro_costo);
-        $('#modalEditarAmbiente').modal('show');
+        $('#myModalEditarAmbiente').modal('show');
     });
 }
 
@@ -85,7 +85,7 @@ function modalEditarGrupo(ideditar){
         $("#ideditar").val(codigo_gru);
         $("#descripcion").val(descripcion);
         $("#consecutivo").val(consecutivo);
-        $('#modalEditarGrupo').modal('show');
+        $('#myModalEditarGrupo').modal('show');
     });
 }
 
@@ -128,7 +128,7 @@ function modalEditarEquipo(ideditar){
         $("#codigo_und").val(codigo_und);
         $("#estandar_combustible").val(estandar_combustible);
         $("#fecha_ultimo_mtto").val(fecha_ultimo_mtto);
-        $('#modalEditarEquipo').modal('show');
+        $('#myModalEditarEquipo').modal('show');
     });
 }
 
@@ -227,12 +227,12 @@ function modalSubirArchivo(equipo){
             $("#equiposDoc").append(td);                
         }
     });
-    $('#modalArchivo').modal('show');
+    $('#myModalArchivo').modal('show');
 }
 
 function modalEliminarFile($iddocumento){
     $('#id').val($iddocumento);
-    $('#modalEliminarArchivo').modal('show');
+    $('#myModalEliminarArchivo').modal('show');
 }
 
 function modalEditarLinea(ideditar){
@@ -250,7 +250,7 @@ function modalEditarLinea(ideditar){
         $("#ideditar").val(codigo_linea);
         $("#descripcion").val(descripcion);
         $("#grupo").val(grupo);
-        $('#modalEditarLinea').modal('show');
+        $('#myModalEditarLinea').modal('show');
     });
 }
 
@@ -267,7 +267,7 @@ function modalEditarUnidad(ideditar){
 
         $("#ideditar").val(codigo_und);
         $("#descripcion").val(descripcion);
-        $('#modalEditarUnidades').modal('show');
+        $('#myModalEditarUnidades').modal('show');
     });
 }
 
@@ -284,7 +284,7 @@ function modalEditarTipo(ideditar){
 
         $("#ideditar").val(id);
         $("#descripcion").val(descripcion);
-        $('#modalEditarTipo').modal('show');
+        $('#myModalEditarTipo').modal('show');
     });
 }
 
@@ -303,7 +303,7 @@ function modalActualizarEquipo(ideditar){
         $("#codigo_eqp").val(codigo_eqp);
         $("#descripcion").val(descripcion);
         $("#fecha_ultimo_mtto").val(fecha_ultimo_mtto);
-        $('#modalActualizarEquipo').modal('show');
+        $('#myModalActualizarEquipo').modal('show');
     });
 }
 
@@ -330,11 +330,23 @@ function modalHistorialMtto(codigo){
             }              
         }
     });
-    $('#modalHistorialMtto').modal('show'); 
+    $('#myModalHistorialMtto').modal('show'); 
 }
 
 function modalEliminar(codigo){
     $("#codigo").val(codigo);
     $('#myModalEliminar').modal('show');
 }
+
+function modalEliminarHabitacion(codigo){
+    $("#id_piso").val(codigo);
+    $('#myModalEliminarHabitacion').modal('show');
+}
+
+// --------------------- Cerrar modales ----------------------
+
+function cerrarModals(modal){
+    $('#myModal' + modal).modal('hide');
+}
+
 

@@ -93,7 +93,7 @@
                                     foreach($tipos as $tipo){
                             ?>
                                 <tr>
-                                    <th><?php echo $tipo['id']; ?></th>
+                                    <td><?php echo $tipo['id']; ?></td>
                                     <td><?php echo $tipo['descripcion']; ?></td>
                                     <td style="text-align:right;">
                                         <a href="javascript:void(0);" onclick="modalEditarTipo(<?php echo $tipo['id']; ?>)"><button type="button" class="btn btn-success my-1 btn-sm" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
