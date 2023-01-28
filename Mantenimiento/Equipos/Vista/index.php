@@ -34,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="../../../Bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../../../Bootstrap/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -83,7 +84,7 @@
                     <h2>Inventario de equipos</h2>
                     <div class="row">
                         <div class="col p-2">
-                            <a href="javascript:void(0);" onclick="modalAgregar('Equipo')"><button type="button" class="btn btn-info" title="Añadir"><i class="bi bi-plus-lg"></i> Agregar Equipo </button></a> 
+                            <a href="javascript:void(0);" onclick="modalAgregar('Equipo')"><button type="button" class="btn btn-success btn-sm" title="Añadir"><i class="fa fa-plus-circle"></i> Agregar Equipo </button></a> 
                         </div>
 
                         <div class="col-3 p-2" style="text-align:left;">
@@ -107,7 +108,7 @@
                         <form action="" method="POST">
                             <div class="row">
                                 <div class="col-8"> <input class="form-control" type="search" placeholder="Buscar..." name="consulta"></div>
-                                <div class="col-4"> <button type="submit" class="btn btn-primary">Buscar</button></div>
+                                <div class="col-4"> <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> Buscar</button></div>
                             </div>
                         </form>
                         </div>
@@ -115,13 +116,13 @@
                         
                         <div class="col p-2">
                             <form action="" method="POST">
-                                <button type="submit" class="btn btn-primary" name="verTodos">Ver todos</button>
+                                <button type="submit" class="btn btn-primary btn-sm" name="verTodos"><i class="fa fa-bars"></i> Ver todos</button>
                             </form>
                         </div>
                     </div>
 
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-hover" >
                             <thead>
                                 <tr>
                                     <th scope="col">Codigo</th>
@@ -145,7 +146,7 @@
                                     foreach($equipos as $equipo){
                             ?>
                                 <tr>
-                                    <th><?php echo $equipo['codigo_eqp']; ?></th>
+                                    <td><?php echo $equipo['codigo_eqp']; ?></td>
                                     <td><?php echo $equipo['centro_costo']; ?></td>
                                     <td><?php echo $equipo['ambiente']; ?></td>
                                     <td><?php echo $equipo['habitacion']; ?></td>
@@ -157,9 +158,9 @@
                                     <td><?php echo $equipo['marca']; ?></td>
                                     <td><?php echo $equipo['fecha_ultimo_mtto']; ?></td>
                                     <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalEditarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-success my-1" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
-                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-danger" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
-                                        <a href="javascript:void(0)" onclick="modalSubirArchivo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-light my-1" title="Subir Archivo"><i class="bi bi-capslock-fill"></i> </button></a>
+                                        <a href="javascript:void(0);" onclick="modalEditarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-success my-1 btn-sm" title="Editar"><i class="bi bi-pencil-fill"></i> </button></a>
+                                        <a href="javascript:void(0);" onclick="modalEliminar('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash3"></i> </button></a>
+                                        <a href="javascript:void(0)" onclick="modalSubirArchivo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-light my-1 btn-sm" title="Subir Archivo"><i class="bi bi-capslock-fill"></i> </button></a>
                                     </td>
                                 </tr>
                             <?php

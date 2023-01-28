@@ -8,7 +8,7 @@ if ($_POST) {
     $modeloTipo->add($descripcion);
    
     }else{
-        header('Location: ../../index.php');
+        header('Location: ../Vista/index.php');
     }
 
 ?>

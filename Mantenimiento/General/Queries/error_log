@@ -295,3 +295,68 @@
 [20-Dec-2022 21:26:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/lstdoc.php on line 15
 [20-Dec-2022 21:26:36 UTC] PHP Notice:  Undefined variable: infoEquipo in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/lstdoc.php on line 16
 [20-Dec-2022 21:26:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/lstdoc.php on line 16
+[18-Jan-2023 23:00:14 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[18-Jan-2023 23:00:15 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[18-Jan-2023 23:00:15 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[18-Jan-2023 23:00:18 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[18-Jan-2023 23:00:18 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[18-Jan-2023 23:00:21 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[18-Jan-2023 23:00:24 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[18-Jan-2023 23:03:25 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[18-Jan-2023 23:03:26 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[18-Jan-2023 23:03:26 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[18-Jan-2023 23:03:30 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:30:15 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:33:02 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:34:39 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:34:54 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:34:54 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[19-Jan-2023 14:36:48 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:37:02 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:37:02 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[19-Jan-2023 14:37:02 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:38:01 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:38:04 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:38:04 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[19-Jan-2023 14:38:07 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:38:09 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:38:09 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[19-Jan-2023 14:38:11 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[19-Jan-2023 14:38:12 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[19-Jan-2023 14:38:12 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[25-Jan-2023 14:05:14 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 14:05:16 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[25-Jan-2023 14:05:16 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[25-Jan-2023 14:05:22 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[25-Jan-2023 14:08:37 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 14:08:40 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[25-Jan-2023 14:08:40 UTC] PHP Notice:  Undefined variable: selectHabitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 45
+[25-Jan-2023 15:17:13 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:17:17 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:18:34 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:18:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php:361
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php(361): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php(9): equipo->verAmbientesPorComplejo('005')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php on line 361
+[25-Jan-2023 15:18:37 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:18:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php:361
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php(361): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php(9): equipo->verAmbientesPorComplejo('007')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php on line 361
+[25-Jan-2023 15:18:39 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:18:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php:361
+Stack trace:
+#0 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php(361): PDOStatement->execute()
+#1 /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php(9): equipo->verAmbientesPorComplejo('005')
+#2 {main}
+  thrown in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/Equipos/Modelo/equipos.php on line 361
+[25-Jan-2023 15:19:34 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:19:36 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[25-Jan-2023 15:40:44 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:40:50 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6
+[25-Jan-2023 15:41:46 UTC] PHP Notice:  Undefined index: ambiente in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtroambiente.php on line 6
+[25-Jan-2023 15:41:49 UTC] PHP Notice:  Undefined index: habitacion in /home/tecprado/public_html/app-mtto/tecprado/Mantenimiento/General/Queries/filtrohabitacion.php on line 6

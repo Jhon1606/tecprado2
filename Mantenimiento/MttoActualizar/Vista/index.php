@@ -34,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="../../../Bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../../../Bootstrap/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -103,7 +104,7 @@
                         <form action="" method="POST">
                             <div class="row">
                                 <div class="col-8"> <input class="form-control" type="search" placeholder="Buscar..." name="consulta"></div>
-                                <div class="col-4"> <button type="submit" class="btn btn-primary">Buscar</button></div>
+                                <div class="col-4"> <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> Buscar</button></div>
                             </div>
                         </form>
                         </div>
@@ -111,7 +112,7 @@
                         
                         <div class="col p-2 m-3">
                             <form action="" method="POST">
-                                <button type="submit" class="btn btn-primary" name="verTodos">Ver todos</button>
+                                <button type="submit" class="btn btn-primary btn-sm" name="verTodos"><i class="fa fa-bars"></i> Ver todos</button>
                             </form>
                         </div>
                     </div>
@@ -138,7 +139,7 @@
                                     foreach($equipos as $equipo){
                             ?>
                                 <tr>
-                                    <th><?php echo $equipo['codigo_eqp']; ?></th>
+                                    <td><?php echo $equipo['codigo_eqp']; ?></td>
                                     <td><?php echo $equipo['descripcion']; ?></td>
                                     <td><?php echo $equipo['centro_costo']; ?></td>
                                     <td><?php echo $equipo['ambiente']; ?></td>
@@ -147,8 +148,8 @@
                                     <td><?php echo $equipo['codigo_linea']; ?></td>
                                     <td><?php echo $equipo['fecha_ultimo_mtto']; ?></td>
                                     <td style="text-align:right;">
-                                        <a href="javascript:void(0);" onclick="modalActualizarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-sm btn-success my-1" title="Actualizar">Actualizar</button></a>
-                                        <a href="javascript:void(0);" onclick="modalHistorialMtto('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn-sm btn-success my-1" title="Historial">Historial</button></a>
+                                        <a href="javascript:void(0);" onclick="modalActualizarEquipo('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-sm btn-success my-1" title="Actualizar"><i class="fa fa-random"></i></button></a>
+                                        <a href="javascript:void(0);" onclick="modalHistorialMtto('<?php echo $equipo['codigo_eqp']; ?>')"><button type="button" class="btn btn-sm btn-info my-1" title="Historial"><i class="fa fa-calendar"></i></button></a>
                                     </td>
                                 </tr>
                             <?php

@@ -6,12 +6,14 @@ if ($_POST) {
 
     $codigo = $_POST['codigo'];
     $descripcion = strtoupper($_POST['descripcion']); 
-    $modeloComplejo->existe($codigo);
-    
-    $modeloComplejo->add($codigo,$descripcion);
-   
+    if($modeloComplejo->existe($codigo)){
+        create_flash_message("Error", "El código existe","error");
+        header('Location: ../Vista/index.php');
     }else{
-        header('Location: ../../index.php');
+        $modeloComplejo->add($codigo,$descripcion);
     }
-
+   
+}else{
+    header('Location: ../../index.php');
+}
 ?>

@@ -7,12 +7,15 @@ if ($_POST) {
     $codigo_linea = $_POST['codigo_linea'];
     $descripcion = strtoupper($_POST['descripcion']); 
     $grupo = $_POST['grupo'];
-    $modeloLinea->existe($codigo_linea);
-    
-    $modeloLinea->add($codigo_linea,$descripcion,$grupo);
-   
+    if($modeloLinea->existe($codigo_linea)){
+        create_flash_message("Error", "El código existe","error");
+        header('Location: ../Vista/index.php');
     }else{
-        header('Location: ../../index.php');
-    }
+        $modeloLinea->add($codigo_linea,$descripcion,$grupo);
+    }  
+   
+}else{
+    header('Location: ../../index.php');
+}
 
 ?>

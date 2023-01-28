@@ -12,12 +12,15 @@ if ($_POST) {
     $centro_costo = $_POST['centro_costo']; 
     $tipo_ubicacion = $_POST['tipo_ubicacion']; 
     
-    $modeloAmbiente->existe($codigo);
-   
-    $modeloAmbiente->add($codigo,$descripcion,$centro_costo,$tipo_ubicacion);
-   
+    if($modeloAmbiente->existe($codigo)){
+        create_flash_message("Error", "El código existe","error");
+        header('Location: ../Vista/index.php');
     }else{
-        header('Location: ../../index.php');
-    }
+        $modeloAmbiente->add($codigo,$descripcion,$centro_costo,$tipo_ubicacion);
+    }  
+
+}else{
+    header('Location: ../../index.php');
+}
 
 ?>

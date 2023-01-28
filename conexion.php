@@ -14,7 +14,7 @@ class conexion{
         $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conexion;
         } catch (PDOException $error) {
-        echo "Error" .$error->getMessage();
+            echo "Error" .$error->getMessage();
         }
     }
 }

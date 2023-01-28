@@ -7,12 +7,15 @@ if ($_POST) {
     $codigo_gru = $_POST['codigo_gru'];
     $descripcion = strtoupper($_POST['descripcion']); 
     $consecutivo = $_POST['consecutivo']; 
-    $modeloGrupo->existe($codigo_gru);
-    
-    $modeloGrupo->add($codigo_gru,$descripcion,$consecutivo);
-   
+    if($modeloGrupo->existe($codigo_gru)){
+        create_flash_message("Error", "El código existe","error");
+        header('Location: ../Vista/index.php');
     }else{
-        header('Location: ../../index.php');
-    }
+        $modeloGrupo->add($codigo_gru,$descripcion,$consecutivo);
+    }  
+
+}else{
+    header('Location: ../../index.php');
+}
 
 ?>

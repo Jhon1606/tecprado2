@@ -1,10 +1,10 @@
 <!-- Modal -->
-<div class="modal fade" id="myModalEquipo" tabindex="-1" aria-hidden="true">
+<div class="modal  fade" id="myModalEquipo" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Añadir Equipo</h5>
-                <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+                <button type="button" onclick="cerrarModals('Equipo')" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- Formulario -->
             <form action="../Controlador/add.php" method="POST">
@@ -46,7 +46,7 @@
                     
                     <div class="mb-3">
                         <label for="form-label">Descripcion</label>
-                        <textarea class="form-control" name="descripcion" rows="3"></textarea>
+                        <textarea class="form-control" name="descripcion" rows="2"></textarea>
                     </div>
 
                     <div class="mb-3">
@@ -92,7 +92,7 @@
                     
                     <div class="mb-3">
                         <label for="form-label">Observaciones</label>
-                        <textarea class="form-control" name="observaciones" rows="3"></textarea>
+                        <textarea class="form-control" name="observaciones" rows="2"></textarea>
                     </div>
 
                     <div class="mb-3">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="index.php"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar</button></a> 
+                    <button type="button" onclick="cerrarModals('Equipo')" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar</button>
                     <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
