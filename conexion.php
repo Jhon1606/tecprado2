@@ -2,7 +2,7 @@
 
 class conexion{
 
-    private $servidor = "localhost:3308";
+    private $servidor = "localhost";
     private $usuario = "root";
     private $db = "tecprado";
     private $password = "";
